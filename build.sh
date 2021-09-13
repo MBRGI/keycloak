@@ -14,7 +14,9 @@ rm -rf $APP_HOME/keycloak-$KEYCLOAK_VERSION
 unzip keycloak-$KEYCLOAK_VERSION.zip
 cd config/postgres/main
 rm -f postgresql-42.2.23.jar
+set +e
 wget https://jdbc.postgresql.org/download/postgresql-42.2.23.jar
+set -e
 cd -
 
 mkdir -p $APP_HOME/keycloak-$KEYCLOAK_VERSION/conf/keycloak.d
