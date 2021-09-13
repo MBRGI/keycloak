@@ -18,6 +18,6 @@ wget -q https://jdbc.postgresql.org/download/postgresql-42.2.23.jar
 cd -
 
 mkdir -p $APP_HOME/keycloak-$KEYCLOAK_VERSION/conf/keycloak.d
-
-export KEYCLOAK_DIR=keycloak-$KEYCLOAK_VERSION
+mv keycloak-$KEYCLOAK_VERSION keycloak
+export KEYCLOAK_DIR=keycloak
 rsync -r config/* $KEYCLOAK_DIR/modules/system/layers/keycloak/com
