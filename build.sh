@@ -21,3 +21,4 @@ mkdir -p $APP_HOME/keycloak-$KEYCLOAK_VERSION/conf/keycloak.d
 mv keycloak-$KEYCLOAK_VERSION keycloak
 export KEYCLOAK_DIR=keycloak
 rsync -r config/* $KEYCLOAK_DIR/modules/system/layers/keycloak/com
+cp -f ./theme/keycloak-bg.png ./keycloak/themes/keycloak/login/resources/img/keycloak-bg.png
