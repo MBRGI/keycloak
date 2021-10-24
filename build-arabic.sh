@@ -6,7 +6,7 @@ set -x
 [ -z "$KEYCLOAK_VERSION" ] && export KEYCLOAK_VERSION="15.0.2"
 
 rm -rf $APP_HOME/keycloak-$KEYCLOAK_VERSION-git
-git clone https://github.com/KalvadTech/keycloak.git --depth 1 -b arabic keycloak-$KEYCLOAK_VERSION-git
+git clone https://github.com/KalvadTech/keycloak.git --depth 1 -b 15.0.2-arabic keycloak-$KEYCLOAK_VERSION-git
 cd keycloak-$KEYCLOAK_VERSION-git
 mvn -Pdistribution \
           -pl distribution/server-dist \
