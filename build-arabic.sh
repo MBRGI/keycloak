@@ -13,7 +13,7 @@ mvn -Pdistribution \
           -am \
           -Dmaven.test.skip \
           clean install
-cp distribution/server-dist/target/keycloak-16.0.0-SNAPSHOT $APP_HOME/keycloak-$KEYCLOAK_VERSION
+cp -r distribution/server-dist/target/keycloak-15.0.2 $APP_HOME/keycloak-$KEYCLOAK_VERSION
 cd ..
 
 cd config/postgres/main
