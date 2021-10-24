@@ -9,9 +9,9 @@ if [ ! -f keycloak-$KEYCLOAK_VERSION.zip ]; then
     echo "Keycloak not found, Downloading Keycloak version $KEYCLOAK_VERSION"
     wget -q "https://github.com/keycloak/keycloak/releases/download/$KEYCLOAK_VERSION/keycloak-$KEYCLOAK_VERSION.zip"
 fi
-rm -rf $APP_HOME/keycloak-$KEYCLOAK_VERSION
-git clone https://github.com/KalvadTech/keycloak.git -b arabic keycloak-$KEYCLOAK_VERSION
-cd keycloak-$KEYCLOAK_VERSION
+rm -rf $APP_HOME/keycloak-$KEYCLOAK_VERSION-git
+git clone https://github.com/KalvadTech/keycloak.git -b arabic keycloak-$KEYCLOAK_VERSION-git
+cd keycloak-$KEYCLOAK_VERSION-git
 mvn -Pdistribution \
           -pl distribution/server-dist \
           -am \
