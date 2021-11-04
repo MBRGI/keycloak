@@ -12,6 +12,7 @@ if [ ! -f keycloak-$KEYCLOAK_VERSION.zip ]; then
 fi
 
 rm -rf $APP_HOME/keycloak-$KEYCLOAK_VERSION
+rm -rf $APP_HOME/keycloak
 unzip keycloak-$KEYCLOAK_VERSION.zip
 cd config/postgres/main
 rm -f postgresql-42.2.23.jar
@@ -22,4 +23,5 @@ mkdir -p $APP_HOME/keycloak-$KEYCLOAK_VERSION/conf/keycloak.d
 mv keycloak-$KEYCLOAK_VERSION keycloak
 export KEYCLOAK_DIR=keycloak
 rsync -r config/* $KEYCLOAK_DIR/modules/system/layers/keycloak/com
-cp -rf ./theme/thedigitalschool ./keycloak/themes/thedigitalschool
+rm -rf ./keycloak/themes/thedigitalschool
+cp -rf ./theme ./keycloak/themes/thedigitalschool
