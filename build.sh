@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e
-
+set -x
 [ -z "$APP_HOME" ] && export APP_HOME=$(pwd)
 [ -z "$KEYCLOAK_VERSION" ] && export KEYCLOAK_VERSION="15.0.2"
 
@@ -22,4 +22,4 @@ mkdir -p $APP_HOME/keycloak-$KEYCLOAK_VERSION/conf/keycloak.d
 mv keycloak-$KEYCLOAK_VERSION keycloak
 export KEYCLOAK_DIR=keycloak
 rsync -r config/* $KEYCLOAK_DIR/modules/system/layers/keycloak/com
-cp -f ./theme/keycloak-bg.png ./keycloak/themes/keycloak/login/resources/img/keycloak-bg.png
+cp -rf ./theme/thedigitalschool ./keycloak/themes/thedigitalschool
