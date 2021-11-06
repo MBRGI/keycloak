@@ -13,5 +13,6 @@ set -x
 export KEYCLOAK_DIR=keycloak
 export local=\$local
 envsubst  < standalone.xml > ./$KEYCLOAK_DIR/standalone/configuration/standalone.xml
+cp standalone.conf ./$KEYLOAK_DIR/bin/standalone.conf
 cd $KEYCLOAK_DIR/bin
 ./standalone.sh $1
