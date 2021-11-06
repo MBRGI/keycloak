@@ -8,7 +8,7 @@ set -x
 #https://github.com/KalvadTech/keycloak/releases/download/15.0.2-arabic/keycloak-15.0.2.zip
 if [ ! -f keycloak-$KEYCLOAK_VERSION.zip ]; then
     echo "Keycloak not found, Downloading Keycloak version $KEYCLOAK_VERSION"
-    wget -q "https://github.com/KalvadTech/keycloak/releases/download/$KEYCLOAK_VERSION-arabic/keycloak-$KEYCLOAK_VERSION.zip"
+    wget -q "https://github.com/KalvadTech/keycloak/releases/download/$KEYCLOAK_VERSION-arabic-encoding/keycloak-$KEYCLOAK_VERSION.zip"
 fi
 
 rm -rf $APP_HOME/keycloak-$KEYCLOAK_VERSION
